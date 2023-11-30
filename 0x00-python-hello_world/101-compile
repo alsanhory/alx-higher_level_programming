@@ -1,0 +1,13 @@
+#!/bin/bash
+pycode="$PYFILE"
+pycoutput="${pycode%.py}.pyc"
+echo "Original filename: $pycode"
+echo "Output filename: $pycoutput"
+echo "Compiling $pycode to $pycoutput ..."
+python3 -m py_compile "$pycode"
+
+if [ -f "$pycoutput" ]; then
+    echo "Compilation successful!"
+else
+    echo "Compilation failed."
+fi
