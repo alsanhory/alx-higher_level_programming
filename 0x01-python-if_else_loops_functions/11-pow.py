@@ -8,4 +8,4 @@ def pow(a, b):
     for i in range(b):
         res *= a
 
-    return res
+    return round(res, 2)
